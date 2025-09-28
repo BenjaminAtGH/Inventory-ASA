@@ -1,3 +1,4 @@
+
 *{
     margin: 0;
     padding: 0;
@@ -24,17 +25,23 @@
     padding: 0;
     margin: 0;
     position: relative;
-    top: 100% ;
+    top: calc(100% - 10%) ;
     height: 10%;
     display: flex;
     flex-direction: row;
-    white-space: none;
+    justify-content: space-evenly;
    
     
 }
 
 .navBawah button{
-    scale: 90%;
-    flex: 1;
+    flex:  1;
     padding: 10px;
+    border-style: none;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
+
+.ambil{
+    background: ;
 }
