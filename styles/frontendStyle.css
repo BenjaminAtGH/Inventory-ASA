@@ -1,4 +1,9 @@
-
+:root{
+    --companyOrange: linear-gradient(to top, #ff4400dd ,  #ec262633 );
+    --companyOrangeLight: linear-gradient(to top, #ec262633 , #ff4400dd );
+    --companyBlue: linear-gradient(to top, #006affdd ,  #d4ffa933 );
+    --companyBlueLight: linear-gradient(to top, #d4ffa933 ,  #006affdd );
+}
 *{
     margin: 0;
     padding: 0;
@@ -21,27 +26,64 @@
 }
 
 .navBawah{
-    background: red;
     padding: 0;
     margin: 0;
+    width: 100%;
     position: relative;
     top: calc(100% - 10%) ;
     height: 10%;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+
+    /* gap: 2px; */
    
     
 }
 
-.navBawah button{
-    flex:  1;
-    padding: 10px;
-    border-style: none;
-    border-top-left-radius: 9px;
-    border-top-right-radius: 9px;
+.navBawah input[type="radio"]{
+    display: none;
 }
 
-.ambil{
-    background: ;
+.navBawah label{
+    flex:  1;
+    padding: 10px;
+    border-style: solid solid  none;
+    border-width: 3;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    transition: transform 0.2 ease;
+   
+    
 }
+
+.navBawah input[type="radio"]:checked + label{
+    flex: 2;
+    transform: translateY(-10px);
+    height: 40;
+   
+}
+
+
+.kembalikan{
+    background: var(--companyOrange) ;
+    border-color: rgb(149, 0, 0);
+    
+}
+
+.kembalikan:hover{
+    background: var(--companyOrangeLight);
+    border-color: rgb(149, 0, 0);
+}
+
+
+.ambil{
+    background: var(--companyBlue) ;
+    border-color: rgb(5, 5, 109);
+    
+}
+
+.ambil:hover{
+    background: var(--companyBlueLight);
+    border-color: rgb(5, 5, 109);
+}
+
