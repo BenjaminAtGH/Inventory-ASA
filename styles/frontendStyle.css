@@ -4,6 +4,22 @@
     --companyOrangeLight: linear-gradient(to top,#fdc0c0 , #ff4400 );
     --companyBlue: linear-gradient(to top, #006affdd ,  #d4ffa9 );
     --companyBlueLight: linear-gradient(to top, #d4ffa9 ,  #006aff );
+    --companyGlass: rgba(142, 142, 142, 0.3);
+
+      /* element colors */
+    --companyGreen: #A3C528;
+    --companyLightGreen: #e1e843;
+    --companyFieldGreen: #60a230;
+    --companyVerdant: #1f7f57;
+    --companyDarkMoss: #263327;
+    --companyBlack: #0c0c08;
+    --companyNavy: #2c1e76;
+    --companyLightNavy: #4a48ac;
+    
+    /* text colors */
+    --textLight: #f7f2f2;
+    --textDark: #0f0f0f;
+    
 }
 *{
     margin: 0;
@@ -63,9 +79,43 @@
 .menuScreen{
     z-index: 1;
     height: 80%;
+    overflow-y: scroll;
+    margin: 10px 10px 10px 10px;
+    position: relative;
     
     /* background-color: rgb(210, 164, 109); */
     width: 100%;
+}
+.list-barang{
+    border-radius: 10px;
+    background: var(--companyGlass);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 10px 10px ;
+    padding: 10px;
+
+}
+
+.controls{
+    background-color: #006aff;
+    gap: 1rem;
+}
+
+button {
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 10px;
+    background: #444;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover{
+    background: #1c1919;
 }
 
 /* //////////////////////////////////////////////////////////////////////////////// */
@@ -135,5 +185,55 @@
 .ambil:hover{
     background: var(--companyBlueLight);
     border-color: rgb(5, 5, 109);
+}
+
+/* Cart (kartu-carousel) pop-up behaviour */
+
+/* popup carousel positioned inside .menuScreen so it doesn't cover the full viewport */
+kartu-carousel.list-barang{
+    position: absolute;
+    left: 50%;
+    bottom: 6px;
+    transform: translate(-50%, 180%);
+    width: calc(100% - 40px);
+    max-width: 900px;
+    transition: transform 320ms cubic-bezier(.2,.9,.2,1), opacity 200ms ease;
+    opacity: 0;
+    z-index: 60;
+    pointer-events: none;
+    border-radius: 10px 10px 0 0;
+    /* box-shadow: 0 -8px 30px rgba(0,0,0,0.25); */
+    background: var(--companyGlass);
+    overflow: hidden;
+   
+}
+
+kartu-carousel.list-barang.open{
+    transform: translate(-50%, 0%);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* When the carousel is visible, reduce page scroll to avoid double scroll */
+body.cart-open{
+    overflow: hidden;
+}
+
+/* Cart toggle button */
+.cart-toggle{
+    /* position relative to the .menuScreen container so it sits above the bottom nav */
+    position: absolute;
+    right: 24px;
+    bottom: 0px; /* increase this to lift the button higher */
+    z-index: 70;
+    background: var(--companyVerdant);
+    color: white;
+    border-radius: 8px;
+    padding: 10px 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+}
+
+.cart-toggle[aria-expanded="true"]{
+    background: var(--companyFieldGreen);
 }
 

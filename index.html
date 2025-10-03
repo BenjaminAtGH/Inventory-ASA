@@ -12,12 +12,20 @@
             <div class="navAtas">bi
                 <div class="barang">bo</div>
             </div>
-            <div class="menuScreen">sfedfef</div>
+            
+            <div class="menuScreen">
+                <kartu-carousel class="list-barang" id="list-barang">
+                </kartu-carousel>
+                <!-- Cart toggle button (shows/hides the carousel) -->
+                <button id="cart-toggle" class="cart-toggle" aria-controls="list-barang" aria-expanded="false">Cart</button>
+            </div>
             <div class="navBawah">
+                
                 <input type="radio" name="nav" id="kembalikan">
                 <label for="kembalikan" class="kembalikan">KEMBALIKAN</label>
                 <input type="radio" name="nav" id="ambil">
                 <label for="ambil" class="ambil">AMBIL</label>
+                
 
                 
             </div>
@@ -27,7 +35,8 @@
 
     </div>
 
-    </div>
     <script src="scrpits/frontendScript.js"></script>
+    <script type="module" src="scrpits/Ben-website-component-template.js"></script>
+    <script type="module" src="scrpits/main.js"></script>
 </body>
 </html>
