@@ -193,15 +193,15 @@ button:hover{
 kartu-carousel.list-barang{
     position: absolute;
     left: 50%;
-    bottom: 6px;
-    transform: translate(-50%, 180%);
+    bottom: 40px;
+    transform: translate(-50%, 100%);
     width: calc(100% - 40px);
     max-width: 900px;
     transition: transform 320ms cubic-bezier(.2,.9,.2,1), opacity 200ms ease;
     opacity: 0;
     z-index: 60;
     pointer-events: none;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
     /* box-shadow: 0 -8px 30px rgba(0,0,0,0.25); */
     background: var(--companyGlass);
     overflow: hidden;
@@ -224,13 +224,13 @@ body.cart-open{
     /* position relative to the .menuScreen container so it sits above the bottom nav */
     position: absolute;
     right: 24px;
-    bottom: 0px; /* increase this to lift the button higher */
+    bottom: 10px; /* increase this to lift the button higher */
     z-index: 70;
     background: var(--companyVerdant);
     color: white;
     border-radius: 8px;
     padding: 10px 14px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+    /* box-shadow: 0 6px 18px rgba(0,0,0,0.18); */
 }
 
 .cart-toggle[aria-expanded="true"]{
