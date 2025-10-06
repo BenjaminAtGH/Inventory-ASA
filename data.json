@@ -35,7 +35,20 @@
         "alt":"banana",
         "info": ["images/svg/UMBRELLA.svg","images/svg/flame-svgrepo-com.svg","images/svg/BIOHAZARD.svg"]
 
+    },
+    {
+        "title":"Nama Produk",
+        "brand":"AChS.CGRTS!",
+        "lot":"01102025",
+        "exp":"10/25",
+        "masuk":"-",
+        "keluar":"-",
+        "src":"images/freshly-peeled-banana-png.webp",
+        "alt":"banana",
+        "info": ["images/svg/UMBRELLA.svg","images/svg/flame-svgrepo-com.svg","images/svg/BIOHAZARD.svg"]
+
     }
+
 
 
 ]
